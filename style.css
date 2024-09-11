@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    background-color: #ffffff;
+    border: 5px solid green;
+    border-radius: 15px ;
+    height: 400px;
+    width: 420px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    transform: translateX(0px);
+    animation: animation 2s ease-in-out 1;
+}
+@keyframes animation {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+/* form h1 {
+    text-align: center;
+} */
+form input {
+    display: flex;
+    flex-wrap: nowrap;
+}
