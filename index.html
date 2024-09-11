@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <form>
-            <h1>Calculate Your MARKS <br>And Get Your <br> Grade OR Percentage</h1>
-             <div>
+            <h1>Calculate Your Marks<br>Get Your<br>Grade or Percentage</h1>
+            <div>
                 <label for="TotelMath">Total Marks Of Math</label>
                 <br>
                 <input type="number" id="TotelMath">
-             </div>
+            </div>
             <br>
             <div>
                 <label for="ObtainedMath">Obtained Marks of Math</label>
@@ -50,47 +50,46 @@
             <div id="Result"></div>
         </form>
     </div>
-    <script>
-        let guessNum = prompt("Guess Grade Before check Your Result" ,"Example GRADE C");
-        alert("You Say This Grade OK Lets Time To check Your Result \n Correct Or Wrong 😃")
-        function calculateResult() {
 
+    <script>
+        let guessNum = prompt("Guess Grade Before Checking Your Result", "Example: GRADE C");
+        alert("You guessed this grade! Let's see if you're correct or wrong! 😃");
+
+        function calculateResult() {
             let TotelMath = parseFloat(document.querySelector("#TotelMath").value);
             let ObtainedMath = parseFloat(document.querySelector("#ObtainedMath").value);
-
             let TotelPhysics = parseFloat(document.querySelector("#TotelPhysics").value);
             let ObtainedPhysics = parseFloat(document.querySelector("#ObtainedPhysics").value);
-
             let TotelChemistry = parseFloat(document.querySelector("#TotelChemistry").value);
             let ObtainedChemistry = parseFloat(document.querySelector("#ObtainedChemistry").value);
 
-            let totelMarks = TotelMath + TotelPhysics + TotelChemistry;
-            let totelObtained = ObtainedMath + ObtainedPhysics + ObtainedChemistry;
+            let totalMarks = TotelMath + TotelPhysics + TotelChemistry;
+            let totalObtained = ObtainedMath + ObtainedPhysics + ObtainedChemistry;
 
-            let percentage = (totelObtained / totelMarks) * 100;
+            let percentage = (totalObtained / totalMarks) * 100;
 
             let grade = "";
             if (percentage < 33) {
                 grade = "Fail";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n I am SO sad your Result I hope Next Result  Your Good Keep It Up 😃`)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Keep trying for a better result next time! 😃`);
             } else if (percentage >= 33 && percentage < 40) {
                 grade = "E";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n I hope Next Result  Your Good Keep It Up 😃`)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Keep it up for a better result! 😃`);
             } else if (percentage >= 40 && percentage < 50) {
                 grade = "D";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n I hope Next Result  Your Good Keep It Up 😃`)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n You're doing well, keep improving! 😃`);
             } else if (percentage >= 50 && percentage < 60) {
                 grade = "C";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Better Keep It Up 😃`)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Good job, keep going! 😃`);
             } else if (percentage >= 60 && percentage < 70) {
                 grade = "B";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Congratulations Better Keep It Up 👏 `)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Great job! Keep up the hard work! 👏`);
             } else if (percentage >= 70 && percentage < 80) {
                 grade = "A";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Congratulations Keep It Up 🥳 `)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Excellent! Keep it going! 🥳`);
             } else if (percentage >= 80 && percentage <= 100) {
                 grade = "A+";
-                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Congratulations Keep It Up 🥳 `)
+                alert(`Your Percentage: ${percentage.toFixed(2)}% And Your Grade: ${grade} \n Outstanding performance! 🥳`);
             }
 
             let result = document.querySelector("#Result");
