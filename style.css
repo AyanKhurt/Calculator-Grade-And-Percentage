@@ -32,10 +32,7 @@ form {
         transform: translateX(0px);
     }
 }
-/* form h1 {
-    text-align: center;
-} */
 form input {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
